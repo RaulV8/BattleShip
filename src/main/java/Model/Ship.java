@@ -55,4 +55,15 @@ public class Ship {
     public void setState(boolean state) {
         this.state = state;
     }
+
+    @Override
+    public String toString() {
+        return "Ship{" +
+                "sizeX=" + sizeX +
+                ", sizeY=" + sizeY +
+                ", coordX=" + coordX +
+                ", coordY=" + coordY +
+                ", state=" + state +
+                '}'+"\n";
+    }
 }
