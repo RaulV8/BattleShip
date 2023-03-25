@@ -1,14 +1,16 @@
 package Model;
 
+import java.util.Arrays;
+
 public class Ship {
 
     private int sizeX;
     private int sizeY;
-    private int coordX;
-    private int coordY;
+    private int[] coordX;
+    private int[] coordY;
     private boolean state;
 
-    public Ship(int sizeX, int sizeY, int coordX, int coordY, boolean state) {
+    public Ship(int sizeX, int sizeY, int[] coordX, int[] coordY, boolean state) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.coordX = coordX;
@@ -32,20 +34,20 @@ public class Ship {
         this.sizeY = sizeY;
     }
 
-    public int getCoordX() {
+    public int[] getCoordX() {
         return coordX;
     }
 
-    public void setCoordX(int coordX) {
+    public void setCoordX(int[] coordX) {
         this.coordX = coordX;
     }
 
-    public int getCcordY() {
+    public int[] getCoordY() {
         return coordY;
     }
 
-    public void setCcordY(int ccordY) {
-        this.coordY = ccordY;
+    public void setCoordY(int[] coordY) {
+        this.coordY = coordY;
     }
 
     public boolean isState() {
@@ -61,8 +63,8 @@ public class Ship {
         return "Ship{" +
                 "sizeX=" + sizeX +
                 ", sizeY=" + sizeY +
-                ", coordX=" + coordX +
-                ", coordY=" + coordY +
+                ", coordX=" + Arrays.toString(coordX) +
+                ", coordY=" + Arrays.toString(coordY) +
                 ", state=" + state +
                 '}'+"\n";
     }
